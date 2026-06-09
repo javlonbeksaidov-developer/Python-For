@@ -7,11 +7,12 @@ Input                   Output
 1, 2, 3, 5, 9, 4, 2     1
 '''
 
-numbers = input("Son kiriting (masalan: 1, 2, 3, 5, 9, 4, 2): ")
+first_num = int(input("Son kiriting: "))
 
-num = []
-for i in numbers:
-    if i.isdigit():
-        num.append(i)
-
-print(min(num))
+for i in range(6):
+    son = int(input("Son kiriting: "))
+    if son < first_num:
+        min_number = son
+        
+print(min_number)
+        
