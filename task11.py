@@ -8,15 +8,16 @@ Input               Output
 3, 5, 1, 8, 7       4.5
 '''
 
-numbers = input("Son kiriting (masalan: 1, 2, 3, 5, 9, 4, 2): ")
+first_num = int(input("Son kiriting: "))
+min_number = first_num
+max_number = first_num
 
-num = []
-for i in numbers:
-    if i.isdigit():
-        num.append(i)
+for i in range(4):
+    son = int(input("Son kiriting: "))
+    if son < min_number:
+        min_number = son
+    if son > max_number:
+        max_number = son
         
-katta = max(num)
-kichik = min(num)
-
-urtacha = (int(katta) + int(kichik)) / 2
-print(urtacha)
+result = (min_number + max_number) / 2
+print(result)
